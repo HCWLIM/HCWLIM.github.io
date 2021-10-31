@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+
+<body style="text-align: center; font-size: 20px;"></body>
+</head>
+
+<body>
+    <h1>Check Palindrome</h1>
+    Enter a word:<input id="String">
+    <br><br>
+    <button onclick="Value()">Check</button>
+    <p id="res"></p>
+    <script>
+        function palindromeFun(str) {
+            // convert the string into an array using the string.split() function  
+            const arrValue = string.split(''); //   
+
+            // use reverse() method to reverse the array values  
+            const reveArrVal = arrValue.reverse();
+
+            // use join() method to group the array values into the string  
+            const revString = reveArrVal.join('');
+
+            if (string == revString) // if string condition is equal to the revString  
+            {
+                alert('It is a Palindrome string '); // print the Palindrome   
+            }
+            else {
+                alert(' It is not a Palindrome string'); // if the condition is not true.  
+            }
+        }
+        function Value() {
+            var str = document.getElementById("String").value;
+            var f = fact(string);
+        }
+    </script>    
+</body >
+
+</html >
