@@ -6,37 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Count Vowel</title>
+    <body style = "text-align: center; font-size: 20px;"></body>
 </head>
 
 <body>
     <h1>Count vowel of A Word</h1>
+    Enter string: <input type = "text" id = "word" name = "">
+    <br><br>
+    <button onclick = "go()"> check </button>
+    <p id = "p1"></p>
+
     <script>
-        // program to count the number of vowels in a string
+        function go(){
+        var str = document.getElementById("word").value;
+        var vowel = "aeiouAEIOU";
+        var ctr = 0;
 
-        // defining vowels
-        const vowels = ["a", "e", "i", "o", "u"]
-
-        function countVowel(str) {
-            // initialize count
-            let count = 0;
-
-            // loop through string to test if each character is a vowel
-            for (let letter of str.toLowerCase()) {
-                if (vowels.includes(letter)) {
-                    count++;
+        for (var x=0; x<str.length; x++){
+            for (var y=0; y<vowel.length; y++){
+                if (str [x] == vowel [y] ){
+                    ctr++;
                 }
             }
-
-            // return number of vowels
-            return count
         }
-
-        // take input
-        const string = prompt('Enter a string: ');
-
-        const result = countVowel(string);
-
-        console.log(result);
+        document.getElementById("p1").innerHTML="The number of vowel is " + ctr;
+        }
     </script>
 
 </body>
